@@ -1,0 +1,226 @@
+<html>
+  <head>
+    <title>clojure.tools.macro - Tools for Macro Writers 0.1.2 API documentation</title>
+    <link href="static/favicon.png" rel="icon" />
+    <link href="static/favicon.png" rel="shortcut icon" />
+    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <style>.menuWrapper{height: 36px;}</style>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://www.wikispaces.com/_/2009051601/s/internal_ie.css" type="text/css" />
+    <![endif]-->
+  </head>
+<!--
+This document was auto-generated from the source by the clojure autodoc system.
+To report errors or ask questions about the overall documentation structure, formatting,
+etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
+For errors in the documentation of a particular namespace, contact the author of that
+namespace.
+-->
+  <body>
+    <div id="AllContentContainer">
+      <div id="Header">
+	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
+	<h1><a title="page header title" id="page-header" href="index.html">Tools for Macro Writers</a></h1>
+      </div>
+      <div id="leftcolumn"><div style="text-align: center;"></div>
+<div class="menu">
+  <div class="WikiCustomNav WikiElement wiki">
+    <span class="toc-header"><span id="project-name">Tools for Macro Writers</span> <span id="version">0.1.2</span> API</span><br />
+    <ul>
+      <li><a class="wiki_link" href="index.html">Overview</a></li>
+      <li><a class="wiki_link" href="api-index.html">API Index</a></li>
+    </ul>
+    
+    
+    <a href="http://clojure.org" class="wiki_link">Clojure Home</a>
+  </div>
+</div>
+</div>
+      <div id="rightcolumn">
+	<div id="Content">
+	  <div class="contentBox"><div class="innerContentBox">
+              <div id="content_view" class="wiki wikiPage">
+                <div id="right-sidebar"><div id="toc">
+  <h1 class="nopad">Table of Contents</h1>
+  <div style="margin-left: 1em;" class="toc-section">
+    <a href="#toc0">Overview</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.macro/defsymbolmacro">defsymbolmacro</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.macro/deftemplate">deftemplate</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.macro/macrolet">macrolet</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.macro/mexpand">mexpand</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.macro/mexpand-1">mexpand-1</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.macro/mexpand-all">mexpand-all</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.macro/name-with-attributes">name-with-attributes</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.macro/symbol-macrolet">symbol-macrolet</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.tools.macro/with-symbol-macros">with-symbol-macros</a>
+    </div>
+    <br />
+  </div>
+</div>
+</div>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">clojure.tools.macro</span>
+  - <span id="header-project">Tools for Macro Writers</span> <span id="header-version">0.1.2</span> (<span id="header-status">in development</span>)
+  </h1>
+<span id="author-line">by <span id="author-name">Konrad Hinsen</span><br /></span>
+<br />Full namespace name: <span id="long-name">clojure.tools.macro</span>
+<p></p>
+<h2>Overview</h2>
+<pre id="namespace-docstr">Local macros and symbol macros
+
+Local macros are defined by a macrolet form. They are usable only
+inside its body. Symbol macros can be defined globally
+(defsymbolmacro) or locally (symbol-macrolet). A symbol
+macro defines a form that replaces a symbol during macro
+expansion. Function arguments and symbols bound in let
+forms are not subject to symbol macro expansion.
+
+Local macros are most useful in the definition of the expansion
+of another macro, they may be used anywhere. Global symbol
+macros can be used only inside a with-symbol-macros form.</pre>
+
+
+<br />
+<h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.macro/defsymbolmacro">defsymbolmacro</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (defsymbolmacro symbol expansion)
+</pre>
+  <pre id="var-docstr">Define a symbol macro. Because symbol macros are not part of
+Clojure's built-in macro expansion system, they can be used only
+inside a with-symbol-macros form.</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.macro/blob/238078b3b43f2216ed8395dbed397fdf904c69e4/src/main/clojure/clojure/tools/macro.clj#L223" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.macro/deftemplate">deftemplate</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (deftemplate name params &amp; forms)
+</pre>
+  <pre id="var-docstr">Define a macro that expands into forms after replacing the
+symbols in params (a vector) by the corresponding parameters
+given in the macro call.</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.macro/blob/238078b3b43f2216ed8395dbed397fdf904c69e4/src/main/clojure/clojure/tools/macro.clj#L237" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.macro/macrolet">macrolet</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (macrolet fn-bindings &amp; exprs)
+</pre>
+  <pre id="var-docstr">Define local macros that are used in the expansion of exprs. The
+syntax is the same as for letfn forms.</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.macro/blob/238078b3b43f2216ed8395dbed397fdf904c69e4/src/main/clojure/clojure/tools/macro.clj#L202" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.macro/mexpand">mexpand</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (mexpand form)
+</pre>
+  <pre id="var-docstr">Like clojure.core/macroexpand, but takes into account symbol macros.</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.macro/blob/238078b3b43f2216ed8395dbed397fdf904c69e4/src/main/clojure/clojure/tools/macro.clj#L257" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.macro/mexpand-1">mexpand-1</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (mexpand-1 form)
+</pre>
+  <pre id="var-docstr">Like clojure.core/macroexpand-1, but takes into account symbol macros.</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.macro/blob/238078b3b43f2216ed8395dbed397fdf904c69e4/src/main/clojure/clojure/tools/macro.clj#L249" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.macro/mexpand-all">mexpand-all</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (mexpand-all form)
+</pre>
+  <pre id="var-docstr">Perform a full recursive macro expansion of a form.</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.macro/blob/238078b3b43f2216ed8395dbed397fdf904c69e4/src/main/clojure/clojure/tools/macro.clj#L265" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.macro/name-with-attributes">name-with-attributes</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (name-with-attributes name macro-args)
+</pre>
+  <pre id="var-docstr">To be used in macro definitions.
+Handles optional docstrings and attribute maps for a name to be defined
+in a list of macro arguments. If the first macro argument is a string,
+it is added as a docstring to name and removed from the macro argument
+list. If afterwards the first macro argument is a map, its entries are
+added to the name's metadata map and the map is removed from the
+macro argument list. The return value is a vector containing the name
+with its extended metadata map and the list of unprocessed macro
+arguments.</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.macro/blob/238078b3b43f2216ed8395dbed397fdf904c69e4/src/main/clojure/clojure/tools/macro.clj#L273" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.macro/symbol-macrolet">symbol-macrolet</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (symbol-macrolet symbol-bindings &amp; exprs)
+</pre>
+  <pre id="var-docstr">Define local symbol macros that are used in the expansion of exprs.
+The syntax is the same as for let forms.</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.macro/blob/238078b3b43f2216ed8395dbed397fdf904c69e4/src/main/clojure/clojure/tools/macro.clj#L213" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.tools.macro/with-symbol-macros">with-symbol-macros</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (with-symbol-macros &amp; exprs)
+</pre>
+  <pre id="var-docstr">Fully expand exprs, including symbol macros.</pre>
+  
+  
+  <a href="https://github.com/clojure/tools.macro/blob/238078b3b43f2216ed8395dbed397fdf904c69e4/src/main/clojure/clojure/tools/macro.clj#L232" id="var-source">Source</a>
+</div>
+
+
+</div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div id="foot">
+	  <div style="text-align: center;" id="copyright">No copyright info </div>
+	</div>
+      </div>
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
+      Clojure auto-documentation system by Tom Faulhaber.</div>
+    </div>
+    <!-- /AllContentContainer -->
+  </body>
+
+</html>
