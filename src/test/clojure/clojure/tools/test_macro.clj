@@ -17,7 +17,21 @@
 (deftest macrolet-test
   (is (= (macroexpand-1
            '(macro/macrolet [(foo [form] `(~form ~form))]  (foo x)))
-         '(do (x x)))))
+         '(do (x x))))
+  ;; Here, foo is a let-bound (thus protected) symbol, so it must not be
+  ;; subject to macro expansion.
+  (is (= (macroexpand-1
+          '(macro/macrolet [(foo [form] `(inc ~form))]
+             (let [foo identity]
+               (foo 1))))
+         '(do (let* [foo identity] (foo 1)))))
+  ;; And the same for letfn-bound symbols.
+  (is (= (macroexpand-1
+          '(macro/macrolet [(foo [form] `(inc ~form))]
+             (letfn [(foo [x] x)]
+               (foo 1))))
+         '(do (letfn* [foo (fn* foo ([x] x))]
+                (foo 1))))))
 
 (deftest symbol-macrolet-test
   (is (= (macroexpand-1

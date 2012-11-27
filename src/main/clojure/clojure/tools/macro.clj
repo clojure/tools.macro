@@ -69,10 +69,11 @@
   (cond
     (seq? form)
       (let [f (first form)]
-        (cond (contains? special-forms f) form
-              (contains? macro-fns f)     (apply (get macro-fns f) (rest form))
+        (cond (contains? special-forms f)   form
+              (and (not (protected? f))
+                   (contains? macro-fns f)) (apply (get macro-fns f) (rest form))
               (symbol? f)  (cond
-                            (protected? f) form
+                            (protected? f)  form
                             ; macroexpand-1 fails if f names a class
                             (class? (ns-resolve *ns* f)) form
                             :else    (let [exp (expand-symbol f)]
@@ -115,9 +116,9 @@
           (doall (cons [s b] (expand-bindings bindings exprs))))))))
 
 (defn- expand-with-bindings
-  "Handle let* and loop* forms. The symbols defined in them are protected
-   from symbol macro expansion, the definitions and the body expressions
-   are expanded recursively."
+  "Handle let*, letfn* and loop* forms. The symbols defined in them are
+   protected from symbol macro expansion, the definitions and the body
+   expressions are expanded recursively."
   [form]
   (let [f        (first form)
         bindings (partition 2 (second form))
@@ -174,6 +175,7 @@
    'def           #(expand-args % 2)
    'new           #(expand-args % 2)
    'let*          expand-with-bindings
+   'letfn*        expand-with-bindings
    'loop*         expand-with-bindings
    'fn*           expand-fn
    'deftype*      expand-deftype
