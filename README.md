@@ -8,7 +8,7 @@ Tools for writing macros.
 Releases and Dependency Information
 ========================================
 
-Latest stable release: 0.1.1
+Latest stable release: 0.1.2
 
 * [All Released Versions](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22tools.macro%22)
 
@@ -16,14 +16,14 @@ Latest stable release: 0.1.1
 
 [Leiningen](https://github.com/technomancy/leiningen) dependency information:
 
-    [org.clojure/tools.macro "0.1.1"]
+    [org.clojure/tools.macro "0.1.2"]
 
 [Maven](http://maven.apache.org/) dependency information:
 
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>tools.macro</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
     </dependency>
 
 
@@ -94,6 +94,8 @@ Developer Information
 Change Log
 ====================
 
+* Release 0.1.2 on 2012.02.18
+  *  Protect symbols bound by let and letfn against macroexpansion from an outer scope
 * Release 0.1.1 on 2011.05.26
   * Added `name-with-attributes`
 * Release 0.1.0 on 2011.05.04
