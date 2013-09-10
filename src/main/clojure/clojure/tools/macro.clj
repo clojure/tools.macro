@@ -148,16 +148,11 @@
       (cons f bodies)
       (cons f (cons name bodies)))))
 
-(defn- expand-method
-  "Handle a method in a deftype* or reify* form."
-  [m]
-  (rest (expand-fn (cons 'fn* m))))
-
 (defn- expand-deftype
   "Handle deftype* forms."
   [[symbol typename classname fields implements interfaces & methods]]
   (assert (= implements :implements))
-  (let [expanded-methods (map expand-method methods)]
+  (let [expanded-methods (map #(expand-args % 2) methods)]
     (concat
      (list symbol typename classname fields implements interfaces)
      expanded-methods)))
@@ -165,7 +160,7 @@
 (defn- expand-reify
   "Handle reify* forms."
   [[symbol interfaces & methods]]
-  (let [expanded-methods (map expand-method methods)]
+  (let [expanded-methods (map #(expand-args % 2) methods)]
     (cons symbol (cons interfaces expanded-methods))))
 
 ; Handlers for special forms that require special treatment. The default
