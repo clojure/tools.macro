@@ -54,6 +54,14 @@
            '(macro/symbol-macrolet [x foo z bar]
               (fn f ([x y] [x y z]) ([x y z] [x y z]))))
          '(do (fn* f ([x y] [x y bar]) ([x y z] [x y z])))))
+  (is (thrown? Exception
+               (macroexpand-1
+                '(macro/symbol-macrolet [user/bar 42]
+                                        (+ (- bar 2) (* bar 3))))))
+  (is (= (macroexpand-1
+           '(macro/symbol-macrolet [bar 42]
+                                   (+ (- bar 2) (* bar 3))))
+         '(do (+ (- 42 2) (* 42 3)))))
   (comment
     (is (= (nth (second (macroexpand-1
                        '(macro/symbol-macrolet [x xx y yy z zz]

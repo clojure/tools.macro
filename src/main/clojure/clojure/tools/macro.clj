@@ -22,7 +22,8 @@
            Local macros are most useful in the definition of the expansion
            of another macro, they may be used anywhere. Global symbol
            macros can be used only inside a with-symbol-macros form."}
-  clojure.tools.macro)
+  clojure.tools.macro
+  [:require clojure.string])
 
 ; A set of all special forms. Special forms are not macro-expanded, making
 ; it impossible to shadow them by macro definitions. For most special
@@ -197,11 +198,21 @@
           (map? exp) (into {} (map expand-all (seq exp)))
           :else exp)))
 
+(defn- check-not-qualified
+  "Verify that none of the supplied symbols are namespace-qualified"
+  [symbols]
+  (when (not-every? nil? (map namespace symbols))
+    (throw (Exception.
+            (str "Can't macrolet qualified symbol(s): "
+                 (clojure.string/join ", "
+                                      (map str (filter namespace symbols)))))))
+  symbols)
+
 (defmacro macrolet
   "Define local macros that are used in the expansion of exprs. The
    syntax is the same as for letfn forms."
   [fn-bindings & exprs]
-  (let [names      (map first fn-bindings)
+  (let [names      (check-not-qualified (map first fn-bindings))
         name-map   (into {} (map (fn [n] [(list 'quote n) n]) names))
         macro-map  (eval `(letfn ~fn-bindings ~name-map))]
     (binding [macro-fns     (merge macro-fns macro-map)
@@ -213,7 +224,7 @@
    The syntax is the same as for let forms."
   [symbol-bindings & exprs]
   (let [symbol-map (into {} (map vec (partition 2 symbol-bindings)))
-        names      (keys symbol-map)]
+        names      (check-not-qualified (keys symbol-map))]
     (binding [macro-fns     (apply dissoc macro-fns names)
               macro-symbols (merge macro-symbols symbol-map)]
       `(do ~@(doall (map expand-all exprs))))))
