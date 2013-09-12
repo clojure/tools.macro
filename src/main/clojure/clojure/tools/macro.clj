@@ -153,7 +153,7 @@
   "Handle deftype* forms."
   [[symbol typename classname fields implements interfaces & methods]]
   (assert (= implements :implements))
-  (let [expanded-methods (map #(expand-args % 2) methods)]
+  (let [expanded-methods (doall (map #(expand-args % 2) methods))]
     (concat
      (list symbol typename classname fields implements interfaces)
      expanded-methods)))
