@@ -1,6 +1,6 @@
 {:namespaces
  ({:source-url
-   "https://github.com/clojure/tools.macro/blob/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj",
+   "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
    :wiki-url
    "http://clojure.github.com/tools.macro/clojure.tools.macro-api.html",
    :name "clojure.tools.macro",
@@ -12,9 +12,9 @@
    :name "defsymbolmacro",
    :namespace "clojure.tools.macro",
    :source-url
-   "https://github.com/clojure/tools.macro/blob/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj#L232",
+   "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L232",
    :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj",
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
    :wiki-url
    "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/defsymbolmacro",
    :doc
@@ -26,9 +26,9 @@
    :name "deftemplate",
    :namespace "clojure.tools.macro",
    :source-url
-   "https://github.com/clojure/tools.macro/blob/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj#L246",
+   "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L246",
    :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj",
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
    :wiki-url
    "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/deftemplate",
    :doc
@@ -40,9 +40,9 @@
    :name "macrolet",
    :namespace "clojure.tools.macro",
    :source-url
-   "https://github.com/clojure/tools.macro/blob/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj#L211",
+   "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L211",
    :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj",
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
    :wiki-url
    "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/macrolet",
    :doc
@@ -54,9 +54,9 @@
    :name "mexpand",
    :namespace "clojure.tools.macro",
    :source-url
-   "https://github.com/clojure/tools.macro/blob/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj#L266",
+   "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L266",
    :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj",
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
    :wiki-url
    "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/mexpand",
    :doc
@@ -68,9 +68,9 @@
    :name "mexpand-1",
    :namespace "clojure.tools.macro",
    :source-url
-   "https://github.com/clojure/tools.macro/blob/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj#L258",
+   "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L258",
    :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj",
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
    :wiki-url
    "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/mexpand-1",
    :doc
@@ -82,9 +82,9 @@
    :name "mexpand-all",
    :namespace "clojure.tools.macro",
    :source-url
-   "https://github.com/clojure/tools.macro/blob/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj#L274",
+   "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L274",
    :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj",
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
    :wiki-url
    "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/mexpand-all",
    :doc "Perform a full recursive macro expansion of a form.",
@@ -95,9 +95,9 @@
    :name "name-with-attributes",
    :namespace "clojure.tools.macro",
    :source-url
-   "https://github.com/clojure/tools.macro/blob/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj#L282",
+   "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L282",
    :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj",
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
    :wiki-url
    "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/name-with-attributes",
    :doc
@@ -109,9 +109,9 @@
    :name "symbol-macrolet",
    :namespace "clojure.tools.macro",
    :source-url
-   "https://github.com/clojure/tools.macro/blob/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj#L222",
+   "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L222",
    :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj",
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
    :wiki-url
    "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/symbol-macrolet",
    :doc
@@ -123,9 +123,9 @@
    :name "with-symbol-macros",
    :namespace "clojure.tools.macro",
    :source-url
-   "https://github.com/clojure/tools.macro/blob/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj#L241",
+   "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L241",
    :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/0cf28f89bba59b0665d290ed65cc5388f58f5ca7/src/main/clojure/clojure/tools/macro.clj",
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
    :wiki-url
    "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/with-symbol-macros",
    :doc "Fully expand exprs, including symbol macros.",
