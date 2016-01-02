@@ -1,134 +1,134 @@
 {:namespaces
- ({:source-url
-   "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
+ ({:doc
+   "Local macros and symbol macros\n\nLocal macros are defined by a macrolet form. They are usable only\ninside its body. Symbol macros can be defined globally\n(defsymbolmacro) or locally (symbol-macrolet). A symbol\nmacro defines a form that replaces a symbol during macro\nexpansion. Function arguments and symbols bound in let\nforms are not subject to symbol macro expansion.\n\nLocal macros are most useful in the definition of the expansion\nof another macro, they may be used anywhere. Global symbol\nmacros can be used only inside a with-symbol-macros form.",
+   :author "Konrad Hinsen",
+   :name "clojure.tools.macro",
    :wiki-url
    "http://clojure.github.com/tools.macro/clojure.tools.macro-api.html",
-   :name "clojure.tools.macro",
-   :author "Konrad Hinsen",
-   :doc
-   "Local macros and symbol macros\n\nLocal macros are defined by a macrolet form. They are usable only\ninside its body. Symbol macros can be defined globally\n(defsymbolmacro) or locally (symbol-macrolet). A symbol\nmacro defines a form that replaces a symbol during macro\nexpansion. Function arguments and symbols bound in let\nforms are not subject to symbol macro expansion.\n\nLocal macros are most useful in the definition of the expansion\nof another macro, they may be used anywhere. Global symbol\nmacros can be used only inside a with-symbol-macros form."}),
+   :source-url
+   "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj"}),
  :vars
- ({:arglists ([symbol expansion]),
+ ({:raw-source-url
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
    :name "defsymbolmacro",
-   :namespace "clojure.tools.macro",
+   :file "src/main/clojure/clojure/tools/macro.clj",
    :source-url
    "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L232",
-   :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
-   :wiki-url
-   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/defsymbolmacro",
+   :line 232,
+   :var-type "macro",
+   :arglists ([symbol expansion]),
    :doc
    "Define a symbol macro. Because symbol macros are not part of\nClojure's built-in macro expansion system, they can be used only\ninside a with-symbol-macros form.",
-   :var-type "macro",
-   :line 232,
-   :file "src/main/clojure/clojure/tools/macro.clj"}
-  {:arglists ([name params & forms]),
-   :name "deftemplate",
    :namespace "clojure.tools.macro",
+   :wiki-url
+   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/defsymbolmacro"}
+  {:raw-source-url
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
+   :name "deftemplate",
+   :file "src/main/clojure/clojure/tools/macro.clj",
    :source-url
    "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L246",
-   :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
-   :wiki-url
-   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/deftemplate",
+   :line 246,
+   :var-type "macro",
+   :arglists ([name params & forms]),
    :doc
    "Define a macro that expands into forms after replacing the\nsymbols in params (a vector) by the corresponding parameters\ngiven in the macro call.",
-   :var-type "macro",
-   :line 246,
-   :file "src/main/clojure/clojure/tools/macro.clj"}
-  {:arglists ([fn-bindings & exprs]),
-   :name "macrolet",
    :namespace "clojure.tools.macro",
+   :wiki-url
+   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/deftemplate"}
+  {:raw-source-url
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
+   :name "macrolet",
+   :file "src/main/clojure/clojure/tools/macro.clj",
    :source-url
    "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L211",
-   :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
-   :wiki-url
-   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/macrolet",
+   :line 211,
+   :var-type "macro",
+   :arglists ([fn-bindings & exprs]),
    :doc
    "Define local macros that are used in the expansion of exprs. The\nsyntax is the same as for letfn forms.",
-   :var-type "macro",
-   :line 211,
-   :file "src/main/clojure/clojure/tools/macro.clj"}
-  {:arglists ([form]),
-   :name "mexpand",
    :namespace "clojure.tools.macro",
+   :wiki-url
+   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/macrolet"}
+  {:raw-source-url
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
+   :name "mexpand",
+   :file "src/main/clojure/clojure/tools/macro.clj",
    :source-url
    "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L266",
-   :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
-   :wiki-url
-   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/mexpand",
+   :line 266,
+   :var-type "function",
+   :arglists ([form]),
    :doc
    "Like clojure.core/macroexpand, but takes into account symbol macros.",
-   :var-type "function",
-   :line 266,
-   :file "src/main/clojure/clojure/tools/macro.clj"}
-  {:arglists ([form]),
-   :name "mexpand-1",
    :namespace "clojure.tools.macro",
+   :wiki-url
+   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/mexpand"}
+  {:raw-source-url
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
+   :name "mexpand-1",
+   :file "src/main/clojure/clojure/tools/macro.clj",
    :source-url
    "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L258",
-   :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
-   :wiki-url
-   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/mexpand-1",
+   :line 258,
+   :var-type "function",
+   :arglists ([form]),
    :doc
    "Like clojure.core/macroexpand-1, but takes into account symbol macros.",
-   :var-type "function",
-   :line 258,
-   :file "src/main/clojure/clojure/tools/macro.clj"}
-  {:arglists ([form]),
-   :name "mexpand-all",
    :namespace "clojure.tools.macro",
+   :wiki-url
+   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/mexpand-1"}
+  {:raw-source-url
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
+   :name "mexpand-all",
+   :file "src/main/clojure/clojure/tools/macro.clj",
    :source-url
    "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L274",
-   :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
-   :wiki-url
-   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/mexpand-all",
-   :doc "Perform a full recursive macro expansion of a form.",
-   :var-type "function",
    :line 274,
-   :file "src/main/clojure/clojure/tools/macro.clj"}
-  {:arglists ([name macro-args]),
-   :name "name-with-attributes",
+   :var-type "function",
+   :arglists ([form]),
+   :doc "Perform a full recursive macro expansion of a form.",
    :namespace "clojure.tools.macro",
+   :wiki-url
+   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/mexpand-all"}
+  {:raw-source-url
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
+   :name "name-with-attributes",
+   :file "src/main/clojure/clojure/tools/macro.clj",
    :source-url
    "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L282",
-   :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
-   :wiki-url
-   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/name-with-attributes",
+   :line 282,
+   :var-type "function",
+   :arglists ([name macro-args]),
    :doc
    "To be used in macro definitions.\nHandles optional docstrings and attribute maps for a name to be defined\nin a list of macro arguments. If the first macro argument is a string,\nit is added as a docstring to name and removed from the macro argument\nlist. If afterwards the first macro argument is a map, its entries are\nadded to the name's metadata map and the map is removed from the\nmacro argument list. The return value is a vector containing the name\nwith its extended metadata map and the list of unprocessed macro\narguments.",
-   :var-type "function",
-   :line 282,
-   :file "src/main/clojure/clojure/tools/macro.clj"}
-  {:arglists ([symbol-bindings & exprs]),
-   :name "symbol-macrolet",
    :namespace "clojure.tools.macro",
+   :wiki-url
+   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/name-with-attributes"}
+  {:raw-source-url
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
+   :name "symbol-macrolet",
+   :file "src/main/clojure/clojure/tools/macro.clj",
    :source-url
    "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L222",
-   :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
-   :wiki-url
-   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/symbol-macrolet",
+   :line 222,
+   :var-type "macro",
+   :arglists ([symbol-bindings & exprs]),
    :doc
    "Define local symbol macros that are used in the expansion of exprs.\nThe syntax is the same as for let forms.",
-   :var-type "macro",
-   :line 222,
-   :file "src/main/clojure/clojure/tools/macro.clj"}
-  {:arglists ([& exprs]),
-   :name "with-symbol-macros",
    :namespace "clojure.tools.macro",
+   :wiki-url
+   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/symbol-macrolet"}
+  {:raw-source-url
+   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
+   :name "with-symbol-macros",
+   :file "src/main/clojure/clojure/tools/macro.clj",
    :source-url
    "https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L241",
-   :raw-source-url
-   "https://github.com/clojure/tools.macro/raw/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj",
-   :wiki-url
-   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/with-symbol-macros",
-   :doc "Fully expand exprs, including symbol macros.",
-   :var-type "macro",
    :line 241,
-   :file "src/main/clojure/clojure/tools/macro.clj"})}
+   :var-type "macro",
+   :arglists ([& exprs]),
+   :doc "Fully expand exprs, including symbol macros.",
+   :namespace "clojure.tools.macro",
+   :wiki-url
+   "http://clojure.github.com/tools.macro//clojure.tools.macro-api.html#clojure.tools.macro/with-symbol-macros"})}
