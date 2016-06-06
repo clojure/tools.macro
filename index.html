@@ -81,6 +81,9 @@ namespace.
       <a href="#clojure.tools.macro/with-symbol-macros" class="toc-entry-anchor">with-symbol-macros</a>
       
     </div>
+  </div><div class="toc-section" style="margin-left: 1em;">
+    <a style="margin-top: 3px;" href="#"></a>
+    
   </div>
 </div>
 </div>
@@ -123,6 +126,7 @@ macros can be used only inside a with-symbol-macros form.</pre>
     <pre id="var-docstr">Define a symbol macro. Because symbol macros are not part of
 Clojure's built-in macro expansion system, they can be used only
 inside a with-symbol-macros form.</pre>
+    <pre id="var-specs"></pre>
     
     
     <a id="var-source" href="https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L232">Source</a>
@@ -136,6 +140,7 @@ inside a with-symbol-macros form.</pre>
     <pre id="var-docstr">Define a macro that expands into forms after replacing the
 symbols in params (a vector) by the corresponding parameters
 given in the macro call.</pre>
+    <pre id="var-specs"></pre>
     
     
     <a id="var-source" href="https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L246">Source</a>
@@ -148,6 +153,7 @@ given in the macro call.</pre>
 </pre>
     <pre id="var-docstr">Define local macros that are used in the expansion of exprs. The
 syntax is the same as for letfn forms.</pre>
+    <pre id="var-specs"></pre>
     
     
     <a id="var-source" href="https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L211">Source</a>
@@ -159,6 +165,7 @@ syntax is the same as for letfn forms.</pre>
     <pre id="var-usage">Usage: (mexpand form)
 </pre>
     <pre id="var-docstr">Like clojure.core/macroexpand, but takes into account symbol macros.</pre>
+    <pre id="var-specs"></pre>
     
     
     <a id="var-source" href="https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L266">Source</a>
@@ -170,6 +177,7 @@ syntax is the same as for letfn forms.</pre>
     <pre id="var-usage">Usage: (mexpand-1 form)
 </pre>
     <pre id="var-docstr">Like clojure.core/macroexpand-1, but takes into account symbol macros.</pre>
+    <pre id="var-specs"></pre>
     
     
     <a id="var-source" href="https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L258">Source</a>
@@ -181,6 +189,7 @@ syntax is the same as for letfn forms.</pre>
     <pre id="var-usage">Usage: (mexpand-all form)
 </pre>
     <pre id="var-docstr">Perform a full recursive macro expansion of a form.</pre>
+    <pre id="var-specs"></pre>
     
     
     <a id="var-source" href="https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L274">Source</a>
@@ -200,6 +209,7 @@ added to the name's metadata map and the map is removed from the
 macro argument list. The return value is a vector containing the name
 with its extended metadata map and the list of unprocessed macro
 arguments.</pre>
+    <pre id="var-specs"></pre>
     
     
     <a id="var-source" href="https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L282">Source</a>
@@ -212,6 +222,7 @@ arguments.</pre>
 </pre>
     <pre id="var-docstr">Define local symbol macros that are used in the expansion of exprs.
 The syntax is the same as for let forms.</pre>
+    <pre id="var-specs"></pre>
     
     
     <a id="var-source" href="https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L222">Source</a>
@@ -223,6 +234,7 @@ The syntax is the same as for let forms.</pre>
     <pre id="var-usage">Usage: (with-symbol-macros &amp; exprs)
 </pre>
     <pre id="var-docstr">Fully expand exprs, including symbol macros.</pre>
+    <pre id="var-specs"></pre>
     
     
     <a id="var-source" href="https://github.com/clojure/tools.macro/blob/7398f083a3c1504af07b6493a36962577fd1fc79/src/main/clojure/clojure/tools/macro.clj#L241">Source</a>
