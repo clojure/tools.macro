@@ -2,12 +2,12 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>tools.macro</artifactId>
   <version>0.1.6-SNAPSHOT</version>
-  <name>${artifactId}</name>
+  <name>tools.macro</name>
 
   <parent>
     <groupId>org.clojure</groupId>
     <artifactId>pom.contrib</artifactId>
-    <version>0.1.2</version>
+    <version>0.2.0</version>
   </parent>
 
   <developers>
