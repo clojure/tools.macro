@@ -251,7 +251,7 @@
   (let [param-map (for [p params] (list (list 'quote p) (gensym)))
         template-params (vec (map second param-map))
         param-map (vec (apply concat param-map))
-        expansion (list 'list (list 'quote `symbol-macrolet) param-map
+        expansion (list `list (list 'quote `symbol-macrolet) param-map
                         (list 'quote (cons 'do forms)))]
     `(defmacro ~name ~template-params ~expansion)))
 
