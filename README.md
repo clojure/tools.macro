@@ -8,7 +8,7 @@ Tools for writing macros.
 Releases and Dependency Information
 ========================================
 
-Latest stable release: 0.1.5
+Latest stable release: 0.2.0
 
 * [All Released Versions](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22tools.macro%22)
 
@@ -16,12 +16,12 @@ Latest stable release: 0.1.5
 
 [CLI/`deps.edn`](https://clojure.org/reference/deps_and_cli) dependency information:
 ```clojure
-org.clojure/tools.macro {:mvn/version "0.1.5"}
+org.clojure/tools.macro {:mvn/version "0.2.0"}
 ```
 
 [Leiningen](https://github.com/technomancy/leiningen) dependency information:
 
-    [org.clojure/tools.macro "0.1.5"]
+    [org.clojure/tools.macro "0.2.0"]
 
 [Maven](https://maven.apache.org/) dependency information:
 
