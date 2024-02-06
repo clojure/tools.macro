@@ -25,4 +25,8 @@
     <url>git@github.com:clojure/tools.macro.git</url>
     <tag>HEAD</tag>
   </scm>
+
+  <properties>
+    <clojure.version>1.10.3</clojure.version>
+  </properties>
 </project>

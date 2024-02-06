@@ -95,6 +95,8 @@ Developer Information
 Change Log
 ====================
 
+* Release 0.2.0 on 2024.02.06
+  * Update Clojure dep to 1.10.3
 * Release 0.1.5 on 2013.09.12
   * Fix macroexpansion of methods in deftype\* and reify\*
   * Allow only non-qualified symbols in macrolet and symbol-macrolet
@@ -113,4 +115,4 @@ Change Log
 Copyright and License
 ========================================
 
-Copyright (c) 2011-2023 Rich Hickey. All rights reserved.  The use and distribution terms for this software are covered by the Eclipse Public License 1.0 (https://opensource.org/license/epl-1-0/) which can be found in the file epl-v10.html at the root of this distribution. By using this software in any fashion, you are agreeing to be bound bythe terms of this license.  You must not remove this notice, or any other, from this software.
+Copyright (c) Rich Hickey. All rights reserved.  The use and distribution terms for this software are covered by the Eclipse Public License 1.0 (https://opensource.org/license/epl-1-0/) which can be found in the file epl-v10.html at the root of this distribution. By using this software in any fashion, you are agreeing to be bound bythe terms of this license.  You must not remove this notice, or any other, from this software.
