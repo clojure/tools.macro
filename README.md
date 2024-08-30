@@ -95,7 +95,7 @@ Developer Information
 Change Log
 ====================
 
-* Next
+* Release 0.2.1 on 2024.08.30
   * TMACRO-9 - fully qualify 'list in expansion
 * Release 0.2.0 on 2024.02.06
   * Update Clojure dep to 1.10.3
