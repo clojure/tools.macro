@@ -3,6 +3,7 @@
   <artifactId>tools.macro</artifactId>
   <version>0.2.2-SNAPSHOT</version>
   <name>tools.macro</name>
+  <description>Utilities for Clojure macro writers.</description>
 
   <parent>
     <groupId>org.clojure</groupId>
